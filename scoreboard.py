@@ -39,6 +39,3 @@ class Scoreboard(Turtle):
             x_pos = 200
         self.goto(x_pos, 50)
         self.write("WIN", align="center", font=("Agency FB", 50, "normal"))
-
-    def reset(self):
-        l_score, r_score = 0, 0
