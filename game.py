@@ -33,20 +33,20 @@ class Game():
         while not game_over:
             time.sleep(0.001)
             self.screen.update()
-            self.ball.move(0.5, 1)
+            self.ball.move(0.75, 1)
             if self.ball.distance(self.r_paddle) < 50 and 350 > self.ball.xcor() > 330:
                 self.ball.bounce()
             elif self.ball.distance(self.l_paddle) < 50 and -350 < self.ball.xcor() < -330:
                 self.ball.bounce()
             elif self.ball.xcor() > 420:
                 self.ball.reset()
-                # r_paddle.reset()
-                # l_paddle.reset()
+                self.r_paddle.reset()
+                self.l_paddle.reset()
                 self.scoreboard.l_scored()
             elif self.ball.xcor() < -420:
                 self.ball.reset()
-                # r_paddle.reset()
-                # l_paddle.reset()
+                self.r_paddle.reset()
+                self.l_paddle.reset()
                 self.scoreboard.r_scored()
             game_over = self.scoreboard.game_over()
         self.scoreboard.win()

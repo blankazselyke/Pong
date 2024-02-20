@@ -26,7 +26,7 @@ class Ball(Turtle):
     def bounce(self):
         if self.xcor() * self.x_dir > 0:
             self.x_dir = self.x_dir * -1
-            self.velocity += 0.3
+            self.velocity += 0.15
 
 
     def reset(self):
